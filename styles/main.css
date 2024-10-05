@@ -1,0 +1,139 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    /*border: 1px solid yellow;*/
+}
+
+html {
+    height: 100dvh;
+    background-color: black;
+    background-image: url(../img/img-fundo-001.avif);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+}
+
+main {
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+div.container-calc {
+    height: 90%;
+    max-height: 500px;
+    width: 95%;
+    max-width: 400px;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+
+    background-color: transparent;
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.24);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.418);
+    overflow: hidden;
+}
+
+div.container-screen {
+    position: absolute;
+    top: 0;
+
+    height: 25%;
+    width: 100%;
+    padding: 10px;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    text-align: right;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.397);
+    background-color: rgba(255, 255, 255, 0.411);
+
+    overflow: hidden;
+}
+
+div.screen-preview {
+    font-size: 1.5em;
+    color: rgb(70, 70, 70);
+}
+
+div.screen-contents {
+    font-size: 2em;
+    color: rgb(46, 46, 46);
+}
+
+div.container-keyboard {
+    position: absolute;
+    bottom: 0;
+
+    height: 75%;
+    width: 100%;
+    padding: 10px;
+
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.685);
+}
+
+div.keyboard-keys {
+    height: 100%;
+
+    display: grid;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+div.rows {
+    display: flex;
+}
+
+div.rows button {
+    width: 25%;
+    
+    border: 1px solid rgba(255, 255, 255, 0.24);
+    background-color: rgba(0, 0, 0, 0.233);
+    color: white;
+    font-size: 1.5em;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.76);
+
+    transition: 0.2s;
+}
+
+#limpar {
+    color: rgb(255, 76, 76);
+    font-weight: bold;
+}
+
+#limpar:hover {
+    background-color: rgba(255, 0, 0, 0.363);
+}
+
+#limpar:active {
+    background-color: rgba(255, 0, 0, 0.658);
+}
+
+div.rows button:hover {
+    background-color: rgba(0, 0, 0, 0.377);
+}
+
+div.rows button:active {
+    background-color: rgba(0, 0, 0, 0.568);
+    font-size: 1em;
+    transition: 0.1s;
+}

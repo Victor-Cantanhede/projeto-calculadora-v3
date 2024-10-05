@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+
+    <!--MAIN-->
+    <main>
+
+        <!--CONTAINER MAIN-->
+        <div class="container-calc">
+
+            <!--CONTAINER SCREEN-->
+            <div class="container-screen">
+                <div class="screen-preview">
+                    <!--added by java script-->
+                </div>
+                <div class="screen-contents">
+                    <!--added by java script-->
+                </div>
+            </div>
+
+            <!--CONTAINER KEYBOARD-->
+            <div class="container-keyboard">
+
+                <!--KEYBOARD KEYS-->
+                <div class="keyboard-keys">
+
+                    <!--ROW 1-->
+                    <div class="rows">
+                        <button id="limpar" onclick="limpar()">C</button>
+                        <button onclick="inputscreen001('(')">(</button>
+                        <button onclick="inputscreen001(')')">)</button>
+                        <button onclick="inputscreen001('/')">/</button>
+                    </div>
+
+                    <!--ROW 2-->
+                    <div class="rows">
+                        <button onclick="inputscreen001(7)">7</button>
+                        <button onclick="inputscreen001(8)">8</button>
+                        <button onclick="inputscreen001(9)">9</button>
+                        <button onclick="inputscreen001('*')">x</button>
+                    </div>
+
+                    <!--ROW 3-->
+                    <div class="rows">
+                        <button onclick="inputscreen001(4)">4</button>
+                        <button onclick="inputscreen001(5)">5</button>
+                        <button onclick="inputscreen001(6)">6</button>
+                        <button onclick="inputscreen001('-')">-</button>
+                    </div>
+
+                    <!--ROW 4-->
+                    <div class="rows">
+                        <button onclick="inputscreen001(1)">1</button>
+                        <button onclick="inputscreen001(2)">2</button>
+                        <button onclick="inputscreen001(3)">3</button>
+                        <button onclick="inputscreen001('+')">+</button>
+                    </div>
+
+                    <!--ROW 5-->
+                    <div class="rows">
+                        <button>%</button>
+                        <button onclick="inputscreen001(0)">0</button>
+                        <button onclick="inputscreen001('.')">,</button>
+                        <button onclick="calcular()">=</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!--SCRIPTS-->
+    <script src="/scripts/main.js"></script>
+</body>
+</html>
