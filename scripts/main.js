@@ -13,7 +13,9 @@ function inputscreen001(p) {
         inputScreen001 += p;
         screen001.innerHTML = inputScreen001;
 
-    } else if (resultado != '' && inputScreen001 == resultado) {
+    } else if (resultado != '' && inputScreen001 == resultado && inputScreen002 == '') {
+        inputScreen001 = '';
+        resultado = '';
         inputScreen001 += p;
         screen001.innerHTML = inputScreen001;
     
@@ -29,6 +31,16 @@ function inputscreen001(p) {
         inputScreen002 = resultado;
         screen002.innerHTML = inputScreen002;
     }
+}
+
+// FUNÇÃO PARA INSERIR PORCENTAGEM
+function porcentagem() {
+    inputScreen001 += '/100*';
+    screen001.innerHTML = inputScreen001;
+
+    resultado = eval(inputScreen001);
+    inputScreen002 = resultado;
+    screen002.innerHTML = inputScreen002;
 }
 
 // FUNÇÃO PARA CALCULAR RESULTADO
