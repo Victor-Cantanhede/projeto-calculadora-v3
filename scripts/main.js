@@ -1,11 +1,14 @@
 // ELEMENTO TELA
 let screen001 = document.querySelector('.screen-contents');
 let screen002 = document.querySelector('.screen-preview');
+let abrirHistorico = document.querySelector('.container-historico');
+let conteudoHistorico = document.querySelector('.historico');
 
 // VALOR TELA
 let inputScreen001 = '';
 let inputScreen002 = '';
 let resultado = '';
+let historico = '';
 
 // FUNÇÃO PARA INSERIR NA TELA
 function inputscreen001(p) {
@@ -51,6 +54,7 @@ function calcular() {
     inputScreen001 = resultado;
     screen001.innerHTML = inputScreen001;
 
+    incluirHistorico()
     inputScreen002 = '';
 }
 
@@ -76,4 +80,20 @@ function limpar() {
     resultado = '';
     screen001.innerHTML = inputScreen001;
     screen002.innerHTML = inputScreen002;
+}
+
+// FUNÇÃO EXIBIR HISTÓRICO
+function historicoEnabled() {
+    if (abrirHistorico.style.display == 'none') {
+        abrirHistorico.style.display = 'block';
+
+    } else {
+        abrirHistorico.style.display = 'none';
+    }
+}
+
+// FUNÇÃO INCLUIR HISTÓRICO
+function incluirHistorico() {
+    historico += (inputScreen002 + inputScreen001 + '<br>');
+    conteudoHistorico.innerHTML = historico;
 }
