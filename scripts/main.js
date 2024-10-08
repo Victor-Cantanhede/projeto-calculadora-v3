@@ -54,6 +54,21 @@ function calcular() {
     inputScreen002 = '';
 }
 
+// FUNÇÃO BACKSPACE
+function backspace() {
+    if (inputScreen001 == resultado) {
+        limpar();
+
+    } else {
+        inputScreen001 = inputScreen001.slice(0, -1);
+        screen001.innerHTML = inputScreen001;
+    
+        resultado = eval(inputScreen001);
+        inputScreen002 = resultado;
+        screen002.innerHTML = inputScreen002;
+    }
+}
+
 // FUNÇÃO PARA LIMPAR TUDO
 function limpar() {
     inputScreen001 = '';

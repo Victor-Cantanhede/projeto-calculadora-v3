@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora</title>
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=backspace" />
 </head>
 <body>
 
@@ -31,8 +32,15 @@
                 <div class="keyboard-keys">
 
                     <!--ROW 1-->
+                    <button id="backspace" onclick="backspace()">
+                        <span class="material-symbols-outlined">
+                            backspace
+                        </span>
+                    </button>
                     <div class="rows">
-                        <button id="limpar" onclick="limpar()">C</button>
+                        <button id="limpar" onclick="limpar()">
+                            C
+                        </button>
                         <button onclick="inputscreen001('(')">(</button>
                         <button onclick="inputscreen001(')')">)</button>
                         <button onclick="inputscreen001('/')">/</button>
