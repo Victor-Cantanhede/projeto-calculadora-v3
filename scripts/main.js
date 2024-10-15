@@ -60,7 +60,7 @@ function calcular() {
 
 // FUNÇÃO BACKSPACE
 function backspace() {
-    if (inputScreen002 == '') {
+    if (inputScreen002 == '' && inputScreen002 != 0) {
         limpar();
 
     } else {
